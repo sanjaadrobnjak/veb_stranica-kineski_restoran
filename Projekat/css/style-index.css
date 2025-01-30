@@ -1,0 +1,59 @@
+.team-section {
+    padding: 10px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.card-deck {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    margin: 15px;
+    width: 300px; /* Fiksna širina kartica */
+}
+.card img {
+    height: 250px; /* Fiksna visina slika */
+    object-fit: cover;
+}
+.card-body {
+    text-align: center;
+}
+  #akcija, #najbolje_ocenjeno{
+    background-color: rgb(166, 166, 166);
+    color: white;
+  }
+  
+  #akcija a{
+    color: white;
+  }
+
+  .banner{
+    height: 400px;
+    margin: 5px;
+  }
+
+  .banner img{
+    height: 100%;
+    width: auto;
+  }
+
+  #naslov {
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(137, 48, 48);
+  }
+    
+  #home {
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/background.jpg');
+    min-height: 75%;
+    filter: none;
+  }

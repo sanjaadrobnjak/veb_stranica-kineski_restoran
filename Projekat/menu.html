@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jelovnik</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style-menu.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script-menu.js"></script>
+    <script src="js/language-switch.js"></script>
+
+</head>
+<body class="light-grey">
+  <div class="content">
+
+<!-- Links (sit on top) -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/logo.jpeg" alt="Logo" style="height:60px">
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Početna</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Galerija</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="menu.html">Jelovnik</a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="menu.html?section=Predjela">Predjela</a></li>
+          <li><a class="dropdown-item" href="menu.html?section=GlavnaJela">Glavna jela</a></li>
+          <li><a class="dropdown-item" href="menu.html?section=Dezerti">Dezerti</a></li>
+          </ul>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="account.html">Moj nalog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">O nama</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Jezik
+          </a>
+          <div class="dropdown-menu" aria-labelledby="languageDropdown">
+              <a class="dropdown-item" href="#" onclick="changeLanguage('sr')">Srpski</a>
+              <a class="dropdown-item" href="#" onclick="changeLanguage('en')">Engleski</a>
+          </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Menu Container -->
+<div class="w3-container light-grey" id="menu">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Početna</a></li>
+      <li class="breadcrumb-item active">Jelovnik</li>
+    </ul>
+    <div class="w3-content" style="max-width:700px">
+   
+      <h2>Jelovnik</h2>
+      <br>
+
+      <form>
+        <select name="sortiranje" id="sortiranje" size="1">
+          <option value="opadajuce">Po nazivu opadajuće</option>
+          <option value="rastuce">Po nazivu rastuće</option>
+        </select> 
+        <input type="button" name="sortirajj" value="Sortiraj" onclick="sortirajJela()">
+      </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      <form onsubmit="return pretraziJelo()">  
+        Unesite naziv jela: <input type="text" id="unosJela"> &nbsp;&nbsp;
+        <input type="submit" value="Pretraži">
+      </form>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <p id="rezultatPretrage"></p>
+      <br>
+      <form>
+        <input type="button" value="Preuzmi jelovnik" id="prezumiJelovnik" onclick="preuzmiJelovnik()">
+      </form>
+      <br><br>
+    
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Predjela');" id="myLink">
+          <div class="w3-col s4 tablink">Predjela</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'GlavnaJela');">
+          <div class="w3-col s4 tablink">Glavna jela</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Dezerti');">
+            <div class="w3-col s4 tablink">Dezerti</div>
+          </a>
+        </div>
+        <div id="Predjela" class="w3-container menu w3-padding-48 w3-card"> 
+          <h5 data-name="Prolećne rolnice sa povrćem">Prolećne rolnice sa povrćem</h5>
+          <a href="food/spring_rolls.html"><img src="images/spring_rolls.jpeg" alt="Prolecne rolnice sa povrcem" width="40%"></a>
+          <hr>
+          <h5 data-name="Gjoze sa svinjetinom">Gjoze sa svinjetinom</h5>
+          <a href="food/pork_dumplings.html"><img src="images/pork_dumplings.jpeg" alt="Prolecne rolnice sa povrcem" width="40%"></a>
+          <hr>
+          <h5 data-name="Terijaki pileći ražnjići">Terijaki pileći ražnjići</h5>
+          <a href="food/teriyaki_chicken_sticks.html"><img src="images/teriyaki_chicken_sticks.jpeg" alt="Terijaki pileci raznjici" width="40%"></a>
+        </div>
+      
+  
+      <div id="GlavnaJela" class="w3-container menu w3-padding-48 w3-card">
+            <h5 data-name="Kung pao piletina">Kung pao piletina</h5>
+            <a href="food/kung_pao_chicken.html"><img src="images/kung_pao_chicken.png" alt="Kung pao piletina" width="40%"></a>
+            <hr>
+            <h5 data-name="Slatko kisela svinjetina">Slatko kisela svinjetina</h5>
+            <a href="food/sweet_sour_pork.html"><img src="images/sweet_sour_pork.jpeg" alt="Slatko kisela svinjetina" width="40%"></a>
+            <hr>
+            <h5 data-name="Mapo tofu">Mapo tofu</h5>
+            <a href="food/mapo_tofu.html"><img src="images/mapo_tofu.jpeg" alt="Mapo tofu" width="40%"></a>
+      </div>  
+
+      <div id="Dezerti" class="w3-container menu w3-padding-48 w3-card">
+            <h5 data-name="Puding od manga">Puding od manga</h5>
+            <a href="food/mango_pudding.html"><img src="images/mango_pudding.jpeg" alt="Puding od manga" width="40%"></a>
+            <hr>
+            <h5 data-name="Sladoled od susama">Sladoled od susama</h5>
+            <a href="food/sesame_icecream.html"><img src="images/sesame_icecream.jpeg" alt="Sladoled od susama" width="40%"></a>
+            <hr>
+            <h5 data-name="Mesečev kolač">Mesečev kolač</h5>
+            <a href="food/mooncake.html"><img src="images/mooncake.jpeg" alt="Mesecev kolac" width="40%"></a>
+      </div>  
+
+    </div>
+  </div>
+
+  <br>
+  </div>
+  <!--Footer-->
+  <footer class="w3-center w3-white w3-padding-24 w3-small">
+    <p>Copyright 2024, Tanja Kvaščev, Sanja Drobnjak, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</p>
+  </footer>
+  </body>
+  </html>

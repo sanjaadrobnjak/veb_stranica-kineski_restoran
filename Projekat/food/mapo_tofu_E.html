@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapo tofu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style-food.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/script-food.js"></script>
+    <script src="../js/language-switch.js"></script>
+</head>
+<body class="light-grey">
+    <div class="content">
+
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index_E.html">
+                  <img src="../images/logo.jpeg" alt="Logo" style="height:60px">
+              </a>
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="../index_E.html">Main page</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../gallery_E.html">Gallery</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="../menu_E.html">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../menu_E.html?section=Predjela">Appetizers</a></li>
+                    <li><a class="dropdown-item" href="../menu_E.html?section=GlavnaJela">Main courses</a></li>
+                    <li><a class="dropdown-item" href="../menu_E.html?section=Dezerti">Desserts</a></li>
+                    </ul>
+                </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../account_E.html">My account</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../about_E.html">About us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <a class="dropdown-item" href="#" onclick="changeLanguage('sr')">Serbian</a>
+                        <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+    <div class="row align-items-center predjelo-container"> 
+
+        <div class="ml-2">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index_E.html">Main page</a></li>
+                <li class="breadcrumb-item"><a href="../menu_E.html">Menu</a></li>
+                <li class="breadcrumb-item"><a href="../menu_E.html?section=GlavnaJela">Main courses</a></li>
+                <li class="breadcrumb-item active">Mapo tofu</li>
+            </ul>
+        </div>
+        
+        <div class="col-sm-6">
+            <div class="slika m-2">
+                <div class="border border-5">
+                    <img src="../images/mapo_tofu.jpeg" alt="Naziv predjela" class="predjelo-img" style="width: 100%;">
+                </div>
+            </div>          
+        </div>
+        <div class="col-sm-6">
+            <h2>Mapo tofu</h2> 
+            <p class="w3-text-grey">Soft tofu dipped in a spicy sauce made from shiitake 
+                and black mushrooms, Szechuan chili pepper and soy sauce.
+            </p>
+            <p class="w3-text-grey">Price for a small portion: <strong>650 din</strong></p>
+            <p class="w3-text-grey">Price for a big portion: <strong>880 din</strong></p>
+
+            <form id="forma">
+                Quantity: <input type="number" id="kolicina" required>
+                &nbsp;&nbsp;&nbsp;
+                Size: <input type="radio" name="velicina" id="velika" value="velika"><label for="velika">Big</label>
+                &nbsp;
+                <input type="radio" name="velicina" checked id="mala" value="mala"><label for="mala">Small</label>
+                <br><br>
+                <input type="submit" name="potvrdi" value="Add to cart" id="dodaj">
+                <input type="hidden" id="mapo-tofu" class="jelo">
+                <input type="hidden" id="mapo-tofu" class="jeloen">
+            </form>
+            <br>
+            <form>
+                Rate the dish: <input type="range" id="ocena" name="ocena" min="1" max="5">
+                &nbsp;&nbsp;&nbsp;
+                <input type="button" value="Rate" id="oceni">
+                <input type="hidden" id="sesto" class="jela">
+            </form>
+            <br>
+            <div id="prosek">
+                Average rating of the dish:
+            </div>
+            <br>
+            <form>
+                <input type="button" value="Download the menu" id="preuzmiJelovnik">
+            </form>
+        </div>
+    </div>
+
+    
+</div>
+
+      <!--Footer-->
+      <footer class="w3-center w3-white w3-padding-24 w3-small">
+        <p>Copyright 2024, Tanja Kvaščev, Sanja Drobnjak, Department of Software Engineering, Faculty of Electrical Engineering, University of Belgrade</p>
+    </footer>
+
+
+</body>
+</html>

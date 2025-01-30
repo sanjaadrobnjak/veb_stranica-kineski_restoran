@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style-menu.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script-menu.js"></script>
+    <script src="js/language-switch.js"></script>
+    
+
+</head>
+<body class="light-grey">
+  <div class="content">
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+  
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index_E.html">
+            <img src="images/logo.jpeg" alt="Logo" style="height:60px">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index_E.html">Main page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery_E.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="menu_E.html">Menu</a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="menu_E.html?section=Predjela">Appetizers</a></li>
+              <li><a class="dropdown-item" href="menu_E.html?section=GlavnaJela">Main courses</a></li>
+              <li><a class="dropdown-item" href="menu_E.html?section=Dezerti">Desserts</a></li>
+              </ul>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="account_E.html">My account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about_E.html">About us</a>
+            </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Language
+              </a>
+              <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                  <a class="dropdown-item" href="#" onclick="changeLanguage('sr')">Serbian</a>
+                  <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Menu Container -->
+<div class="w3-container light-grey" id="menu">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index_E.html">Main page</a></li>
+      <li class="breadcrumb-item active">Menu</li>
+    </ul>
+    <div class="w3-content" style="max-width:700px">
+   
+      <h2>Menu</h2>
+      <br>
+
+      <form>
+        <select name="sortiranje" id="sortiranje" size="1">
+          <option value="opadajuce">Descending by name</option>
+          <option value="rastuce">Ascending by name</option>
+        </select> 
+        <input type="button" name="sortirajj" value="Sort" onclick="sortirajJela()">
+      </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      <form onsubmit="return pretraziJelo()">  
+        Enter the name of the dish: <input type="text" id="unosJela"> &nbsp;&nbsp;
+        <input type="submit" value="Search">
+      </form>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <p id="rezultatPretrage"></p>
+      <br>
+      <form>
+        <input type="button" value="Download the menu" id="prezumiJelovnik" onclick="preuzmiJelovnik()">
+      </form>
+      <br><br>
+    
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Predjela');" id="myLink">
+          <div class="w3-col s4 tablink">Appetizers</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'GlavnaJela');">
+          <div class="w3-col s4 tablink">Main courses</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Dezerti');">
+            <div class="w3-col s4 tablink">Desserts</div>
+          </a>
+        </div>
+        <div id="Predjela" class="w3-container menu w3-padding-48 w3-card"> 
+          <h5 data-name="Vegetable spring rolls">Vegetable spring rolls</h5>
+          <a href="food/spring_rolls_E.html"><img src="images/spring_rolls.jpeg" alt="Vegetable spring rolls" width="40%"></a>
+          <hr>
+          <h5 data-name="Pork dumplings">Pork dumplings</h5>
+          <a href="food/pork_dumplings_E.html"><img src="images/pork_dumplings.jpeg" alt="Pork dumplings" width="40%"></a>
+          <hr>
+          <h5 data-name="Teriyaki chicken sticks">Teriyaki chicken sticks</h5>
+          <a href="food/teriyaki_chicken_sticks_E.html"><img src="images/teriyaki_chicken_sticks.jpeg" alt="Teriyaki chicken sticks" width="40%"></a>
+        </div>
+      
+  
+      <div id="GlavnaJela" class="w3-container menu w3-padding-48 w3-card">
+            <h5 data-name="Kung pao chicken">Kung pao chicken</h5>
+            <a href="food/kung_pao_chicken_E.html"><img src="images/kung_pao_chicken.png" alt="Kung pao chicken" width="40%"></a>
+            <hr>
+            <h5 data-name="Sweet and sour pork">Sweet and sour pork</h5>
+            <a href="food/sweet_sour_pork_E.html"><img src="images/sweet_sour_pork.jpeg" alt="Sweet and sour pork" width="40%"></a>
+            <hr>
+            <h5 data-name="Mapo tofu">Mapo tofu</h5>
+            <a href="food/mapo_tofu_E.html"><img src="images/mapo_tofu.jpeg" alt="Mapo tofu" width="40%"></a>
+      </div>  
+
+      <div id="Dezerti" class="w3-container menu w3-padding-48 w3-card">
+            <h5 data-name="Mango pudding">Mango pudding</h5>
+            <a href="food/mango_pudding_E.html"><img src="images/mango_pudding.jpeg" alt="Mango pudding" width="40%"></a>
+            <hr>
+            <h5 data-name="Sesame ice cream">Sesame ice cream</h5>
+            <a href="food/sesame_icecream_E.html"><img src="images/sesame_icecream.jpeg" alt="Sesame ice cream" width="40%"></a>
+            <hr>
+            <h5 data-name="Mooncake">Mooncake</h5>
+            <a href="food/mooncake_E.html"><img src="images/mooncake.jpeg" alt="Mooncake" width="40%"></a>
+      </div>  
+
+    </div>
+  </div>
+
+  <br>
+  </div>
+  <!--Footer-->
+  <footer class="w3-center w3-white w3-padding-24 w3-small">
+    <p>Copyright 2024, Tanja Kvaščev, Sanja Drobnjak, Department of Software Engineering, Faculty of Electrical Engineering, University of Belgrade</p>
+  </footer>
+  </body>
+  </html>

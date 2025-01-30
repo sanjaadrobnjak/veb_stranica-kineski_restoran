@@ -1,0 +1,47 @@
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+  
+.menu {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#Predjela, #GlavnaJela, #Dezerti{
+  text-align: center;
+}
+
+#Predjela h5,
+#Predjela img,
+#GlavnaJela h5,
+#GlavnaJela img,
+#Dezerti h5,
+#Dezerti img {
+    margin: 10px; 
+}
+
+.tablink{
+  color: black;
+}
+
+.light-grey{
+  background-color: #f2f2f2;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  flex-shrink: 0;
+}
