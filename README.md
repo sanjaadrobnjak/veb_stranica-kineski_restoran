@@ -1,2 +1,4 @@
-# veb_stranica-kineski_restoran
-Realizovanje veb aplikacije kineskog restorana, koja za cilj ima da olakša rad zaposlenima u restoranu, kao i povećanje broja gostiju
+Web application - Chinese restaurant
+
+Developing a web presentation for a Chinese restaurant using HTML, CSS, JavaScript, and Bootstrap technologies. The goal is to facilitate the work of the restaurant staff and attract as many people as possible to visit the restaurant and try new dishes. Visitors to the website should have the ability to search and browse dishes, as well as the option to order food.
+
