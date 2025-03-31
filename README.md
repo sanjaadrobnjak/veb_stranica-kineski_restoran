@@ -1,7 +1,7 @@
 # Web application - Chinese restaurant
 
 ## Project Overview
-Developing a web presentation for a Chinese restaurant. The goal is to facilitate the work of the restaurant staff and attract as many people as possible to visit the restaurant and try new dishes. Visitors to the website should have the ability to search and browse dishes, as well as the option to order food.
+A modern and user-friendly web application designed to showcase a Chinese restaurant and enhance both customer experience and staff efficiency. The platform allows visitors to browse the menu, explore new dishes, and place food orders seamlessly. With multi-language support, intuitive navigation, and responsive design, the website ensures an engaging experience for all users. By combining elegant design with practical functionality, this web application helps attract more visitors and makes ordering food easier than ever.
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
